@@ -1,12 +1,12 @@
 class Solution {
-private:
-    int GCD(int a, int b){
-        return __gcd(a,b);
-    }
 public:
     int findGCD(vector<int>& nums) {
-        int min=*min_element(nums.begin(),nums.end());
-        int max=*max_element(nums.begin(),nums.end());
-        return GCD(min,max);
+        sort(nums.begin(),nums.end());
+        int n=nums.size();
+        int ans;
+        for(int i=0;i<n;i++){
+            ans= __gcd(nums[0],nums[n-1]);
+        }
+        return ans;
     }
 };
